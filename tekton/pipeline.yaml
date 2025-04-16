@@ -1,8 +1,4 @@
-#
-# This pipeline needs the following tasks from Tekton Hub
-#   - git-clone
-#   - flake8
-apiVersion: tekton.dev/v1beta1
+apiVersion: tekton.dev/v1beta1 
 kind: Pipeline
 metadata:  
   name: cd-pipeline
@@ -93,4 +89,3 @@ spec:
           oc get pods -l app=accounts
       runAfter:
         - build
-
